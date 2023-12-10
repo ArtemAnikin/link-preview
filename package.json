@@ -1,0 +1,31 @@
+{
+  "name": "link-preview",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon --exec ts-node app.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtemAnikin/link-preview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtemAnikin/link-preview/issues"
+  },
+  "homepage": "https://github.com/ArtemAnikin/link-preview#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
