@@ -11,10 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const data:IPreviewData = {
-    title: 'Some long custom title',
-    description: 'Some custom description Some custom description',
-    imageUrl: 'https://photographylife.com/wp-content/uploads/2017/01/Best-of-2016-Nasim-Mansurov-20.jpg',
-    customLink: 'url=http://www.custom-link.com'
+    title: 'Knock test',
+    description: 'Knock desc',
+    imageUrl: 'https://api.knock-ai.com/resources/assets/v1/195ff9f2-9f3b-492b-adaf-a11221768483/00aed261-8549-4b4a-b520-529455a42ae9.png',
+    customLink: 'https://api.knock-ai.com/slack/knock/uBrWde'
 }
 
 app.get('/', (req: express.Request, res: express.Response): void => {
