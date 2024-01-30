@@ -22,6 +22,7 @@ app.get('/', (req: express.Request, res: express.Response): void => {
 });
 
 app.post('/set-link-config', (req: express.Request, res :express.Response): void => {
+    console.log('req', req)
     const { title, description, imageUrl, customLink }: IPreviewData = req.body || {};
     data.title = title || data.title;
     data.description = description || data.description;
