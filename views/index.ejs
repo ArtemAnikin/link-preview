@@ -77,11 +77,11 @@
 		/>
 		<meta
 			property="og:video:url"
-			content="https://cdn-cf-east.streamable.com/video/mp4/dv742a.mp4?Expires=1717756114320&amp;Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&amp;Signature=Ds0neIK~fuNxEas4a10bk8-5bvzA6JYWnbFc39S1hojobQyieBo9DpHYi51ppweHeDwpi97f0S0WT1loAnXDCQK26~pYIJ2nIC0Euii6oTM8M4rylZKhkBeY5JN2C37gXlIgIDEhdh-wz-3FH-gw6yOpYpzz7mWETL1uzxWYlchhajeYK3rfSL3zvwTD2GBYCgi2zjq44P11UhIU6HXvlRtKvEYQjO73rY1I2u87hiADe23IoKS~lQj9Ru5IUkbzJM5U8K6V4UERQlChQwUmXODbE0Dx66~AJnZQ7pDjOT3BWkeEqdGXbNIPh5cCz5yAWKMQFoRu-WmG1DubTVtFqA__"
+			content="https://storage.googleapis.com/knock-extension/test-video.mp4"
 		/>
 		<meta
 			property="og:video:secure_url"
-			content="https://api-f.streamable.com/api/v1/videos/dv742a/mp4"
+			content="https://storage.googleapis.com/knock-extension/test-video.mp4"
 		/>
 		<meta property="og:video:type" content="video/mp4" />
 		<meta property="og:video:width" content="746" />
@@ -130,7 +130,7 @@
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
 				const videoPlayer = document.getElementById('videoPlayer');
-				const videoUrl = 'https://api-f.streamable.com/api/v1/videos/dv742a/mp4';
+				const videoUrl = 'https://storage.googleapis.com/knock-extension/test-video.mp4';
 
 				if(videoPlayer) {
 					videoPlayer.src = videoUrl;
