@@ -11,16 +11,14 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.get('/:videoId', (req: express.Request, res: express.Response): void => {
-	const videoId = req.params['id']
-	console.log('videoId', videoId)
+	const videoId = req.params['videoId']
 	res.render('index', { videoId })
 })
 
 app.get(
 	'/player/:videoId',
 	(req: express.Request, res: express.Response): void => {
-		const videoId = req.params['id']
-		console.log('player/videoId', videoId)
+		const videoId = req.params['videoId']
 		res.render('player', { videoId })
 	}
 )
