@@ -1,18 +1,23 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-const app = express();
-const PORT = 3000;
+import express from 'express'
+import bodyParser from 'body-parser'
 
-app.set('view engine', 'ejs');
+const app = express()
+const PORT = 3000
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs')
 
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(bodyParser.json())
 
 app.get('/', (req: express.Request, res: express.Response): void => {
-    res.render('index');
-});
+	res.render('index')
+})
+
+app.get('/player', (req: express.Request, res: express.Response): void => {
+	res.render('player')
+})
 
 app.listen(process.env.PORT || PORT, () => {
-    return console.log(`Express is listening at http://localhost:${PORT}`);
-});
+	return console.log(`Express is listening at http://localhost:${PORT}`)
+})
