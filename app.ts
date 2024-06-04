@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 
 app.get('/:videoId', (req: express.Request, res: express.Response): void => {
 	const videoId = req.params['videoId']
-	const frameLink = 'http://' + req.get('host') + '/player/' + videoId + '.mp4'
+	const frameLink = 'https://' + req.get('host') + '/player/' + videoId + '.mp4'
 	res.render('index', { frameLink })
 })
 
