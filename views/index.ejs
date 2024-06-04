@@ -110,21 +110,22 @@
 	</head>
 
 	<body>
-		<video id="videoPlayer" controls width="640" height="360">
-			Your browser does not support the video tag.
-		</video>
+	<iframe width="560" height="315" src="https://storage.googleapis.com/knock-extension/test-video.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--		<video id="videoPlayer" controls width="640" height="360">-->
+<!--			Your browser does not support the video tag.-->
+<!--		</video>-->
 
 
-		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				const videoPlayer = document.getElementById('videoPlayer');
-				const videoUrl = 'https://storage.googleapis.com/knock-extension/test-video.mp4';
+<!--		<script>-->
+<!--			document.addEventListener('DOMContentLoaded', function() {-->
+<!--				const videoPlayer = document.getElementById('videoPlayer');-->
+<!--				const videoUrl = 'https://storage.googleapis.com/knock-extension/test-video.mp4';-->
 
-				if(videoPlayer) {
-					videoPlayer.src = videoUrl;
-					videoPlayer.load();
-				}
-			});
-		</script>
+<!--				if(videoPlayer) {-->
+<!--					videoPlayer.src = videoUrl;-->
+<!--					videoPlayer.load();-->
+<!--				}-->
+<!--			});-->
+<!--		</script>-->
 	</body>
 </html>
