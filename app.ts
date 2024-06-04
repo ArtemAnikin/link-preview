@@ -10,13 +10,20 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json())
 
-app.get('/', (req: express.Request, res: express.Response): void => {
-	res.render('index')
+app.get('/:videoId', (req: express.Request, res: express.Response): void => {
+	const videoId = req.params['id']
+	console.log('videoId', videoId)
+	res.render('index', { videoId })
 })
 
-app.get('/player', (req: express.Request, res: express.Response): void => {
-	res.render('player')
-})
+app.get(
+	'/player/:videoId',
+	(req: express.Request, res: express.Response): void => {
+		const videoId = req.params['id']
+		console.log('player/videoId', videoId)
+		res.render('player', { videoId })
+	}
+)
 
 app.listen(process.env.PORT || PORT, () => {
 	return console.log(`Express is listening at http://localhost:${PORT}`)
