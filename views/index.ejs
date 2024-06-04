@@ -122,6 +122,21 @@
 	</head>
 
 	<body>
-		<div id="root"></div>
+		<video id="videoPlayer" controls width="640" height="360">
+			Your browser does not support the video tag.
+		</video>
+
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const videoPlayer = document.getElementById('videoPlayer');
+				const videoUrl = 'https://api-f.streamable.com/api/v1/videos/dv742a/mp4';
+
+				if(videoPlayer) {
+					videoPlayer.src = videoUrl;
+					videoPlayer.load();
+				}
+			});
+		</script>
 	</body>
 </html>
