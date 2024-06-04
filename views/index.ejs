@@ -3,21 +3,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="refresh"             content="1;<%= customLink %>">
     <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="<%= title %>" />
-    <meta property="og:description"        content="<%= description %>" />
-    <meta property="og:image"              content="<%= imageUrl %>" />
+    <meta property="og:title"              content="Some long title Some long title Some long title" />
+    <meta property="og:description"        content="Some long description Some long description Some long description Some long description" />
+    <meta property="og:image"              content="https://api.knock-ai.com/resources/assets/v1/195ff9f2-9f3b-492b-adaf-a11221768483/00aed261-8549-4b4a-b520-529455a42ae9.png" />
     <meta property="og:image:width"        content="300" />
     <meta property="og:image:height"       content="50" />
+
+    <!-- Open Graph meta tags for video preview -->
+    <meta property="og:type" content="video">
+    <meta property="og:video" content="//cdn-cf-east.streamable.com/video/mp4/dv742a.mp4?Expires=1717756440&Signature=RbyYHtvZuPlznDkWeLEMfY3eJyZ9JB26L1ra3MDGsvnULKSb44ccC4yZrED1QpKckhd6~RQruUJomZpsLidaKIn-ag4xHAi1e30rNvNs8NnStBzw0KVFFXt6uPnFz5nvdQfe02dL-5M7pan4GV~1x-udwdFkrTRZId7NLsaTPIOzXaZgR5hONLTa8c-QW6-xOe6xLgWKhWhpBXr9w7rHdMWE5QdKMsaNpdM~gonAi38UDrgAbxEQPDn2w4SQ4q-Bd02EojWmVoEVhFBqkb1c9n-bJTDj3dXdzxnSx4DpRIaq-SAPOK0vYD~DL-MOKlJlXzZ4XoakhxgTa0fy56tUVg__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="560">
+    <meta property="og:video:height" content="315">
+
+    <!-- Other required Open Graph meta tags -->
     <style>
         #og-image {
             width: 1200px; /* Set the desired width */
             height: 630px; /* Set the desired height */
         }
     </style>
-
-    <title><%= title %></title>
 </head>
 <body>
 <div id="root"></div>
