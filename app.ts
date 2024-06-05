@@ -14,12 +14,11 @@ app.get('/', (req: express.Request, res: express.Response): void => {
 	res.render('index')
 })
 
+// Serve HTML page with Open Graph meta tags
 app.get('/video-preview', (req, res) => {
-	// const videoUrl = req.query.url;
-
+	// const videoUrl = req.query.url
 	const videoUrl =
 		'https://storage.googleapis.com/knock-extension/test-video.mp4'
-
 	// Assuming videoUrl is validated and sanitized
 	res.send(`
         <!DOCTYPE html>
@@ -36,6 +35,12 @@ app.get('/video-preview', (req, res) => {
             <meta property="og:video:type" content="video/mp4">
             <meta property="og:video:width" content="560">
             <meta property="og:video:height" content="315">
+            <!-- Include oEmbed data -->
+            <meta property="og:type" content="video.other">
+            <meta property="og:video:url" content="${videoUrl}">
+            <meta property="og:video:secure_url" content="${videoUrl}">
+            <meta property="og:video:width" content="560">
+            <meta property="og:video:height" content="315">
         </head>
         <body>
             <h1>Video Preview</h1>
@@ -46,6 +51,11 @@ app.get('/video-preview', (req, res) => {
         </body>
         </html>
     `)
+})
+
+// Start the server
+app.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}`)
 })
 
 app.get('/oembed', (req, res) => {
