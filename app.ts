@@ -15,24 +15,20 @@ app.get('/', (req: express.Request, res: express.Response): void => {
 })
 
 app.get('/oembed', (req, res) => {
-	// const videoUrl = req.query.url
-	const videoUrl =
-		'https://storage.googleapis.com/knock-extension/test-video.mp4'
-
-	// Generate oEmbed data for the video
-	const oembedData = {
+	res.json({
+		height: 1280,
+		html: '<iframe class="streamable-embed" src="https://streamable.com/o/2zsmq8" frameborder="0" scrolling="no" width="720" height="1280" allowfullscreen></iframe>',
+		provider_name: 'Streamable',
+		provider_url: 'https://streamable.com',
+		thumbnail_url:
+			'https://cdn-cf-east.streamable.com/image/2zsmq8.jpg?Expires=1717847441414&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&Signature=hQFA1HLU8Ek1u7JhwqpQHUlpYziPdQ34LIRVNA6G65U4~OMT7FtCJoxtNvsLeb1DBTQEV3eIvTFGV8rma3MawJE-VVQPU~PSCjIV-0IUcKmxqupcIegosELx9N6YJWTvSWdqUVP8A5cape0PIlQAbgsSDuPk-w~hUCQWPQSbV1peB~iEoU~okVAXCpLI-qmLHIjHffyz364lO1iBqiIuy6G6dDcAW5Y7ExV9PgynlUG8JKqLQelqCX0QG0lO6bEPa66xkOphFrpu9xZUBdCrnEBTBtNTmbWAYXm~zWCPhwwzkTcMuRcYWM3qjbnlv7enNlvFdtyI7~xflM05eiuThw__',
+		thumbnail_width: 720,
+		thumbnail_height: 1280,
+		title: 'Узнал страшную правду 30ти летнего мотора Форда😱',
 		type: 'video',
 		version: '1.0',
-		title: 'Your Video Title',
-		author_name: 'Your Name',
-		provider_name: 'Your Provider Name',
-		provider_url: 'https://storage.googleapis.com',
-		thumbnail_url:
-			'https://storage.googleapis.com/knock-extension/assets/knock-logo.svg',
-		html: `<iframe width="560" height="315" src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`
-	}
-
-	res.json(oembedData)
+		width: 720
+	})
 })
 
 app.listen(process.env.PORT || PORT, () => {
