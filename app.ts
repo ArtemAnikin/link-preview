@@ -14,6 +14,40 @@ app.get('/', (req: express.Request, res: express.Response): void => {
 	res.render('index')
 })
 
+app.get('/video-preview', (req, res) => {
+	// const videoUrl = req.query.url;
+
+	const videoUrl =
+		'https://storage.googleapis.com/knock-extension/test-video.mp4'
+
+	// Assuming videoUrl is validated and sanitized
+	res.send(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Video Preview</title>
+            <meta property="og:title" content="Video Preview">
+            <meta property="og:description" content="Check out this video preview!">
+            <meta property="og:image" content="https://example.com/video-thumbnail.jpg">
+            <meta property="og:video" content="${videoUrl}">
+            <meta property="og:video:secure_url" content="${videoUrl}">
+            <meta property="og:video:type" content="video/mp4">
+            <meta property="og:video:width" content="560">
+            <meta property="og:video:height" content="315">
+        </head>
+        <body>
+            <h1>Video Preview</h1>
+            <video controls width="560" height="315">
+                <source src="${videoUrl}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </body>
+        </html>
+    `)
+})
+
 app.get('/oembed', (req, res) => {
 	// const videoUrl = req.query.url
 	const videoUrl =
