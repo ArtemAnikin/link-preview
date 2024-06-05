@@ -35,6 +35,13 @@ app.get('/player', (req: express.Request, res: express.Response): void => {
 	res.render('player')
 })
 
+app.get(
+	'/player-knock',
+	(req: express.Request, res: express.Response): void => {
+		res.render('playerKnock')
+	}
+)
+
 app.listen(process.env.PORT || PORT, () => {
 	return console.log(`Express is listening at http://localhost:${PORT}`)
 })
