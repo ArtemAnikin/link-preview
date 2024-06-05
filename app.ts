@@ -10,10 +10,9 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json())
 
-app.get('/:videoId', (req: express.Request, res: express.Response): void => {
-	const videoId = req.params['videoId']
-	const frameLink = 'https://' + req.get('host') + '/player/' + videoId
-	res.render('index', { frameLink })
+app.get('/video', (req: express.Request, res: express.Response): void => {
+	const videoLink = req.query['videoLink']
+	res.render('index', { videoLink })
 })
 
 app.get('/player', (req: express.Request, res: express.Response): void => {
