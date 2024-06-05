@@ -17,7 +17,7 @@ app.get('/', (req: express.Request, res: express.Response): void => {
 app.get('/oembed', (req, res) => {
 	res.json({
 		height: 1280,
-		html: '<iframe class="streamable-embed" src="https://streamable.com/o/2zsmq8" frameborder="0" scrolling="no" width="720" height="1280" allowfullscreen></iframe>',
+		html: '<iframe class="streamable-embed" src="https://test-video-23-3a148a2fd5d5.herokuapp.com/player" frameborder="0" scrolling="no" width="720" height="1280" allowfullscreen></iframe>',
 		provider_name: 'Streamable',
 		provider_url: 'https://streamable.com',
 		thumbnail_url:
@@ -29,6 +29,10 @@ app.get('/oembed', (req, res) => {
 		version: '1.0',
 		width: 720
 	})
+})
+
+app.get('/player', (req: express.Request, res: express.Response): void => {
+	res.render('player')
 })
 
 app.listen(process.env.PORT || PORT, () => {
