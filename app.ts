@@ -35,6 +35,14 @@ app.get('/player', (req: express.Request, res: express.Response): void => {
 	res.render('player')
 })
 
+app.get('/player-2', (req: express.Request, res: express.Response): void => {
+	res.render('player-2')
+})
+
+app.get('/player-3', (req: express.Request, res: express.Response): void => {
+	res.render('player-3')
+})
+
 app.get(
 	'/player-knock',
 	(req: express.Request, res: express.Response): void => {
