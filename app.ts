@@ -10,6 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json())
 
+app.get('/', (req: express.Request, res: express.Response): void => {
+	res.render('index')
+})
+
 app.get('/oembed', (req, res) => {
 	// const videoUrl = req.query.url
 	const videoUrl =
@@ -31,9 +35,6 @@ app.get('/oembed', (req, res) => {
 	res.json(oembedData)
 })
 
-// app.get('/video', (req: express.Request, res: express.Response): void => {
-// 	res.render('index')
-// })
 //
 // app.get('/player', (req: express.Request, res: express.Response): void => {
 // 	res.json({
